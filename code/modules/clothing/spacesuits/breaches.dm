@@ -4,7 +4,7 @@
 #define SPACESUIT_BREACH_AWFUL 2.5
 #define SPACESUIT_BREACH_CIVILIAN 1.5
 #define SPACESUIT_BREACH_COMBAT 1
-#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 1.5
+#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 10
 
 /datum/breach
 	var/class = 0    // Size. Lower is smaller.
@@ -17,7 +17,7 @@
 	var/can_breach = 1   // Set to 0 to disregard all breaching.
 	var/list/breaches = list()   // Breach datum container.
 	var/breach_vulnerability = SPACESUIT_BREACH_CIVILIAN // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%.
-	var/breach_threshold = SPACESUIT_BREACH_THRESHOLD_CONSTANT*SPACESUIT_BREACH_CIVILIAN // Min damage before a breach is possible.
+	var/breach_threshold = SPACESUIT_BREACH_THRESHOLD_CONSTANT / SPACESUIT_BREACH_CIVILIAN // Min damage before a breach is possible.
 	var/damage = 0   // Current total damage
 	var/brute_damage = 0 // Specifically brute damage.
 	var/burn_damage = 0  // Specifically burn damage.
