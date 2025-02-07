@@ -1,10 +1,9 @@
 //A 'wound' system for space suits.
 //Breaches greatly increase the amount of lost gas and decrease the armor rating of the suit.
 //They can be healed with plastic or metal sheeting.
-#define SPACESUIT_BREACH_AWFUL 4
-#define SPACESUIT_BREACH_CIVILIAN 2
-#define SPACESUIT_BREACH_INDUSTRIAL 0.9\
-#define SPACESUIT_BREACH_COMBAT 0.6
+#define SPACESUIT_BREACH_AWFUL 2.5
+#define SPACESUIT_BREACH_CIVILIAN 1.5
+#define SPACESUIT_BREACH_COMBAT 1
 #define SPACESUIT_BREACH_THRESHOLD_CONSTANT 1.5
 
 /datum/breach
@@ -17,7 +16,7 @@
 
 	var/can_breach = 1   // Set to 0 to disregard all breaching.
 	var/list/breaches = list()   // Breach datum container.
-	var/resilience = SPACESUIT_BREACH_CIVILIAN // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%.
+	var/breach_vulnerability = SPACESUIT_BREACH_CIVILIAN // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%.
 	var/breach_threshold = SPACESUIT_BREACH_THRESHOLD_CONSTANT*SPACESUIT_BREACH_CIVILIAN // Min damage before a breach is possible.
 	var/damage = 0   // Current total damage
 	var/brute_damage = 0 // Specifically brute damage.
@@ -91,7 +90,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 /obj/item/clothing/suit/space/proc/create_breaches(damtype, amount)
 
-	if(!can_breach || !amount)
+	if(!can_breach || !amount || amount < breach_threshold)
 		return
 
 	if(!breaches)
@@ -103,11 +102,11 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	var/turf/T = get_turf(src)
 	if(!T) return
 
-	amount = (amount * src.resilience)*0.2
+	amount = (amount*breach_vulnerability)*0.05 //0.05 is to get it within the 1-5 value at min(amount, 5)
 
 	//Increase existing breaches.
 	for(var/datum/breach/existing in breaches)
-
+		if(prob(50)) break //Don't want to super widen breaches all the time note- fix later
 		if(existing.damtype != damtype)
 			continue
 
@@ -119,11 +118,13 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			else
 				existing.class = 5
 				amount -= needs
+			var/old_descriptor = existing.descriptor
+			existing.update_descriptor()
 
 			if(existing.damtype == BRUTE)
-				T.visible_message(SPAN_WARNING("\The [existing.descriptor] on [src] gapes wider!"))
+				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] gapes wider, turning to a [existing.descriptor]"))
 			else if(existing.damtype == BURN)
-				T.visible_message(SPAN_WARNING("\The [existing.descriptor] on [src] widens!"))
+				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] widens, turning to a [existing.descriptor]"))
 
 	if (amount)
 		//Spawn a new breach.
@@ -142,6 +143,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			T.visible_message(SPAN_WARNING("\A [B.descriptor] marks the surface of [src]!"))
 
 	calc_breach_damage()
+
 
 //Calculates the current extent of the damage to the suit.
 /obj/item/clothing/suit/space/proc/calc_breach_damage()
@@ -174,7 +176,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			name = "damaged [base_name]"
 	else
 		name = "[base_name]"
-
+	//min_cold_protection_temperature = min_cold_protection_temperature*(damage*2)
 	return damage
 
 //Handles repairs (and also upgrades).
@@ -225,13 +227,24 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 /obj/item/clothing/suit/space/get_examine_text(mob/user)
 	. = ..()
+	if(flags_inventory & BYPASSFORINJECTOR)
+		. += SPAN_HELPFUL("This has an [SPAN_BOLD("injection port")] on it's left thigh. This allows the use of [SPAN_BOLD("injectors, syringes, hyposprays and bioglue")] while it is being worn.")
+	else
+		. += SPAN_DANGER("This does [SPAN_BOLD("not have an injection port")]. It is [SPAN_BOLD("impossible to give any medicine while it is being worn")]. This has to be breaking some regulations!")
 	if(can_breach && LAZYLEN(breaches))
+		var/list/breach_counts = list()
+
+		// Count occurrences of each breach flavour name
 		for(var/datum/breach/B in breaches)
-			. += SPAN_DANGER("It has \a [B.descriptor].")
+			breach_counts[B.descriptor] = (breach_counts[B.descriptor] || 0) + 1
+		//tally
+		for(var/descriptor in breach_counts)
+			. += SPAN_DANGER("It has [(breach_counts[descriptor] > 1) ? breach_counts[descriptor] : "a"] [descriptor][(breach_counts[descriptor] > 1) ? "s" : ""].")
+
 	if(supporting_limbs.len)
 		. += SPAN_HELPFUL("It's reactive membranes are supporting your [jointext(supporting_limbs, ", ")].")
 // Called from human_damage
-/mob/living/carbon/human/proc/handle_suit_punctures(damagetype, damage)
+/mob/living/carbon/human/proc/handle_suit_punctures(damagetype, damage, def_zone)
 
 	// Tox and oxy don't matter to suits.
 	if (damagetype != BURN && damagetype != BRUTE)
@@ -241,4 +254,4 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	if(!wear_suit) return
 	if(!istype(wear_suit,/obj/item/clothing/suit/space)) return
 	var/obj/item/clothing/suit/space/SS = wear_suit
-	SS.create_breaches(damagetype, damage*SPACESUIT_BREACH_CIVILIAN)
+	SS.create_breaches(damagetype, damage, def_zone)

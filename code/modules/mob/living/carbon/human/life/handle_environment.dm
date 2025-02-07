@@ -1,5 +1,5 @@
 //Refer to life.dm for caller
-
+//needs to be turned away from binary bit flags for spacesuit stuff
 /mob/living/carbon/human/proc/handle_environment()
 
 	if(!loc)

@@ -52,36 +52,42 @@
 
 /obj/item/clothing/suit/space/equipped(mob/M, put_into_slot)
 	if(flags_equip_slot && slotdefine2slotbit(put_into_slot))
-		check_limb_support()
+		addtimer(CALLBACK(src, PROC_REF(check_limb_support), FALSE,	 M), 0)
 	..()
 
 /obj/item/clothing/suit/space/unequipped(mob/M, slot)
-	check_limb_support(TRUE)
+	addtimer(CALLBACK(src, PROC_REF(check_limb_support), TRUE, M), 0)
 	..()
 
 // Some space suits are equipped with reactive membranes that support
 // broken limbs - at the time of writing, only the ninja suit, but
 // I can see it being useful for other suits as we expand them. ~ Z
 // The actual splinting occurs in /obj/limb/proc/fracture()
-/obj/item/clothing/suit/space/proc/check_limb_support(being_taken_off = FALSE, )
+/obj/item/clothing/suit/space/proc/check_limb_support(being_taken_off = FALSE, human)
 
 	// If this isn't set, then we don't need to care.
 	//if(!LAZYLEN(supporting_limbs))
 	//	return
 
-	var/mob/living/carbon/human/H = usr
+	var/mob/living/carbon/human/H = human
 
 	// If this isn't set, then we don't need to care.
 	if(!being_taken_off)
 		for(var/obj/limb/O in H.limbs)
 			if(!(O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN))
-				to_chat(H, SPAN_NOTICE("You feel [src] constrict about your [O.display_name], supporting it."))
-				supporting_limbs += O.display_name
-				O.status |= LIMB_SPLINTED
+				to_chat(H, SPAN_HELPFUL("You feel the internal cushioning of the [src] begin to inflate against your [O.display_name]."))
+				if(do_after(usr, 5 SECONDS, INTERRUPT_NONE))
+					playsound(loc, 'sound/machines/hiss.ogg', 25, 1)
+					to_chat(H, SPAN_HELPFUL("\The [src] constricts around your [O.display_name], supporting the fracture."))
+					supporting_limbs += O.display_name
+					O.status |= LIMB_SPLINTED
+					O.status |= LIMB_SPLINTED_INDESTRUCTIBLE
 	else
 	// Otherwise, remove the splints.
+		playsound(loc, 'sound/machines/hiss.ogg', 25, 1)
 		for(var/obj/limb/O in H.limbs)
 			if((O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN) && supporting_limbs.Find(O.display_name))
-				to_chat(H, SPAN_NOTICE("\The [src] stops supporting your [O.display_name]."))
+				to_chat(H, SPAN_USERDANGER("\The [src] stops supporting your [O.display_name]."))
 				O.status &= ~ LIMB_SPLINTED
+				O.status &= ~LIMB_SPLINTED_INDESTRUCTIBLE
 		supporting_limbs.Cut()

@@ -475,7 +475,7 @@ This function restores all limbs.
 	updatehealth()
 	// Spacesuit puncturing from external damage/weapons hitting human
 	if(firer || used_weapon)
-		handle_suit_punctures(damagetype, damage)
+		handle_suit_punctures(damagetype, damage, def_zone)
 	return TRUE
 // Heal or damage internal organs
 // Organ has to be either an internal organ by string or a limb with internal organs in.
