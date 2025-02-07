@@ -47,7 +47,7 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
 	siemens_coefficient = 0.9
-
+	var/can_support_limbs = TRUE
 	var/list/supporting_limbs = list()//If not-null, automatically splints breaks. Checked when removing the suit.
 
 /obj/item/clothing/suit/space/equipped(mob/M, put_into_slot)
@@ -64,7 +64,8 @@
 // I can see it being useful for other suits as we expand them. ~ Z
 // The actual splinting occurs in /obj/limb/proc/fracture()
 /obj/item/clothing/suit/space/proc/check_limb_support(being_taken_off = FALSE, human)
-
+	if(!can_support_limbs)
+		return
 	// If this isn't set, then we don't need to care.
 	//if(!LAZYLEN(supporting_limbs))
 	//	return
