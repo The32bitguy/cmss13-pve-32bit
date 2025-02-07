@@ -42,39 +42,46 @@
 	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR
 	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
 	siemens_coefficient = 0.9
 
-	var/list/supporting_limbs //If not-null, automatically splints breaks. Checked when removing the suit.
+	var/list/supporting_limbs = list()//If not-null, automatically splints breaks. Checked when removing the suit.
 
-/obj/item/clothing/suit/space/equipped(mob/M)
-	check_limb_support()
+/obj/item/clothing/suit/space/equipped(mob/M, put_into_slot)
+	if(flags_equip_slot && slotdefine2slotbit(put_into_slot))
+		check_limb_support()
 	..()
 
-/obj/item/clothing/suit/space/dropped()
-	check_limb_support()
+/obj/item/clothing/suit/space/unequipped(mob/M, slot)
+	check_limb_support(TRUE)
 	..()
 
 // Some space suits are equipped with reactive membranes that support
 // broken limbs - at the time of writing, only the ninja suit, but
 // I can see it being useful for other suits as we expand them. ~ Z
 // The actual splinting occurs in /obj/limb/proc/fracture()
-/obj/item/clothing/suit/space/proc/check_limb_support()
+/obj/item/clothing/suit/space/proc/check_limb_support(being_taken_off = FALSE, )
 
 	// If this isn't set, then we don't need to care.
-	if(!LAZYLEN(supporting_limbs))
-		return
+	//if(!LAZYLEN(supporting_limbs))
+	//	return
 
-	var/mob/living/carbon/human/H = src.loc
+	var/mob/living/carbon/human/H = usr
 
-	// If the holder isn't human, or the holder IS and is wearing the suit, it keeps supporting the limbs.
-	if(!istype(H) || H.wear_suit == src)
-		return
-
+	// If this isn't set, then we don't need to care.
+	if(!being_taken_off)
+		for(var/obj/limb/O in H.limbs)
+			if(!(O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN))
+				to_chat(H, SPAN_NOTICE("You feel [src] constrict about your [O.display_name], supporting it."))
+				supporting_limbs += O.display_name
+				O.status |= LIMB_SPLINTED
+	else
 	// Otherwise, remove the splints.
-	for(var/obj/limb/E in supporting_limbs)
-		E.status &= ~ LIMB_SPLINTED
-	supporting_limbs = list()
+		for(var/obj/limb/O in H.limbs)
+			if((O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN) && supporting_limbs.Find(O.display_name))
+				to_chat(H, SPAN_NOTICE("\The [src] stops supporting your [O.display_name]."))
+				O.status &= ~ LIMB_SPLINTED
+		supporting_limbs.Cut()

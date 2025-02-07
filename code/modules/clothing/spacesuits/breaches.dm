@@ -1,6 +1,11 @@
 //A 'wound' system for space suits.
 //Breaches greatly increase the amount of lost gas and decrease the armor rating of the suit.
 //They can be healed with plastic or metal sheeting.
+#define SPACESUIT_BREACH_AWFUL 4
+#define SPACESUIT_BREACH_CIVILIAN 2
+#define SPACESUIT_BREACH_INDUSTRIAL 0.9\
+#define SPACESUIT_BREACH_COMBAT 0.6
+#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 1.5
 
 /datum/breach
 	var/class = 0    // Size. Lower is smaller.
@@ -12,8 +17,8 @@
 
 	var/can_breach = 1   // Set to 0 to disregard all breaching.
 	var/list/breaches = list()   // Breach datum container.
-	var/resilience = 0.2 // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%.
-	var/breach_threshold = 3 // Min damage before a breach is possible.
+	var/resilience = SPACESUIT_BREACH_CIVILIAN // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%.
+	var/breach_threshold = SPACESUIT_BREACH_THRESHOLD_CONSTANT*SPACESUIT_BREACH_CIVILIAN // Min damage before a breach is possible.
 	var/damage = 0   // Current total damage
 	var/brute_damage = 0 // Specifically brute damage.
 	var/burn_damage = 0  // Specifically burn damage.
@@ -98,7 +103,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	var/turf/T = get_turf(src)
 	if(!T) return
 
-	amount = amount * src.resilience
+	amount = (amount * src.resilience)*0.2
 
 	//Increase existing breaches.
 	for(var/datum/breach/existing in breaches)
@@ -223,3 +228,17 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	if(can_breach && LAZYLEN(breaches))
 		for(var/datum/breach/B in breaches)
 			. += SPAN_DANGER("It has \a [B.descriptor].")
+	if(supporting_limbs.len)
+		. += SPAN_HELPFUL("It's reactive membranes are supporting your [jointext(supporting_limbs, ", ")].")
+// Called from human_damage
+/mob/living/carbon/human/proc/handle_suit_punctures(damagetype, damage)
+
+	// Tox and oxy don't matter to suits.
+	if (damagetype != BURN && damagetype != BRUTE)
+		return
+
+	// We may also be taking a suit breach.
+	if(!wear_suit) return
+	if(!istype(wear_suit,/obj/item/clothing/suit/space)) return
+	var/obj/item/clothing/suit/space/SS = wear_suit
+	SS.create_breaches(damagetype, damage*SPACESUIT_BREACH_CIVILIAN)
