@@ -367,7 +367,7 @@
 	damage_type = BRUTE
 
 	damage = XENO_DAMAGE_TIER_5
-	max_range = 4
+	max_range = 8
 	accuracy = HIT_ACCURACY_TIER_MAX
 
 /datum/ammo/xeno/oppressor_tail/on_bullet_generation(obj/projectile/generated_projectile, mob/bullet_generator)

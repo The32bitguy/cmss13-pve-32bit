@@ -220,10 +220,11 @@
 	var/obj/projectile/hook_projectile = new /obj/projectile(stabbing_xeno.loc, create_cause_data(initial(stabbing_xeno.caste_type), stabbing_xeno))
 
 	var/datum/ammo/ammoDatum = GLOB.ammo_list[/datum/ammo/xeno/oppressor_tail]
-
 	hook_projectile.generate_bullet(ammoDatum, bullet_generator = stabbing_xeno)
-	hook_projectile.bound_beam = hook_projectile.beam(stabbing_xeno, "oppressor_tail", 'icons/effects/beam.dmi', 1 SECONDS, 5)
-
+	if(use_white_tail)
+		hook_projectile.bound_beam = hook_projectile.beam(stabbing_xeno, "neomorph_tail", 'icons/effects/beam.dmi', 2 SECONDS, 10)
+	else
+		hook_projectile.bound_beam = hook_projectile.beam(stabbing_xeno, "oppressor_tail", 'icons/effects/beam.dmi', 2 SECONDS, 10)
 	hook_projectile.fire_at(targetted_atom, stabbing_xeno, stabbing_xeno, ammoDatum.max_range, ammoDatum.shell_speed)
 	playsound(stabbing_xeno, 'sound/effects/oppressor_tail.ogg', 40, FALSE)
 

@@ -116,6 +116,7 @@
 	charge_time = 0.5 SECONDS
 	xeno_cooldown = 15 SECONDS
 	ability_primacy = XENO_TAIL_STAB
+	var/use_white_tail = FALSE
 
 /datum/action/xeno_action/activable/prae_abduct
 	name = "Abduct"
