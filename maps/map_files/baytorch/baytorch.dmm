@@ -2388,7 +2388,7 @@
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	name = "Mess Hall"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/thirddeck/mess/galley)
 "aFe" = (
 /obj/structure/closet/crate/medical,
@@ -2563,7 +2563,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/petrov/analysis)
 "aHe" = (
 /obj/structure/machinery/status_display,
@@ -3611,18 +3611,6 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3port)
-"aTN" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/shiva/north,
-/area/torch/fifthdeck/storage)
 "aTO" = (
 /obj/structure/pipes/standard/simple/visible/green{
 	dir = 10
@@ -3802,7 +3790,7 @@
 /obj/structure/pipes/standard/simple/hidden{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/medical/foyer)
 "aWV" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -3903,11 +3891,6 @@
 /obj/structure/barricade/handrail,
 /obj/structure/barricade/handrail{
 	dir = 4
-	},
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
@@ -5134,13 +5117,6 @@
 	},
 /turf/open/floor/shiva/yellow/east,
 /area/torch/seconddeck/robotics/surgery)
-"bqi" = (
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
-/turf/open/floor/plating,
-/area/torch/firstdeck/maintenance/forestarboard)
 "bqq" = (
 /turf/open/floor/almayer_hull,
 /area/torch/thirddeck/d3starboard)
@@ -5471,13 +5447,6 @@
 	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/bridgedeck/bridge)
-"buR" = (
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
-/turf/open/floor/vault2/west,
-/area/torch/firstdeck/maintenance/foreport)
 "buT" = (
 /obj/structure/machinery/door/airlock/atmos/colony{
 	name = "Atmospherics Tank Storage";
@@ -5576,10 +5545,6 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
 "bwb" = (
@@ -5655,11 +5620,6 @@
 /area/torch/firstdeck/maintenance/centralstarboard)
 "bxk" = (
 /obj/item/tool/warning_cone,
-/obj/effect/projector{
-	vector_x = 125;
-	name = "deck2";
-	vector_y = 84
-	},
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/maintenance/aftport)
 "bxz" = (
@@ -6680,13 +6640,6 @@
 /obj/structure/pipes/standard/manifold/fourway/visible/cyan,
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/fuelbay)
-"bMU" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/plating/warnplate/east,
-/area/torch/fifthdeck/hangar)
 "bMV" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	id_tag = "guppy_window";
@@ -7822,10 +7775,6 @@
 /area/torch/thirddeck/d3port)
 "ccR" = (
 /obj/structure/dispenser,
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "ccW" = (
@@ -9695,11 +9644,6 @@
 	pixel_y = 24
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	vector_x = 125;
-	name = "deck2";
-	vector_y = 84
-	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/forestarboard)
 "cDX" = (
@@ -9885,10 +9829,6 @@
 /turf/open/floor/shiva/north,
 /area/torch/thirddeck/commissary)
 "cGa" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/cyan{
@@ -10195,7 +10135,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/door/airlock/almayer/generic/glass,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/fourthdeck/adherent)
 "cIN" = (
 /obj/structure/closet/crate,
@@ -10649,10 +10589,6 @@
 /turf/open/floor/shiva/yellow/west,
 /area/torch/fourthdeck/quartermaster/office)
 "cPK" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/catwalk/prison,
@@ -11057,10 +10993,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
 	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
@@ -11689,7 +11621,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/laboratory)
 "dgA" = (
 /obj/structure/pipes/valve/open{
@@ -12034,7 +11966,7 @@
 "dkQ" = (
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/safe_room)
 "dkW" = (
 /obj/structure/cable,
@@ -13423,10 +13355,6 @@
 /area/torch/firstdeck/medical/hallway)
 "dDX" = (
 /obj/structure/lattice,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/void/show_pipes,
 /area/torch/firstdeck/maintenance/foreport)
 "dEf" = (
@@ -13706,10 +13634,6 @@
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/storage)
 "dHt" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -13748,7 +13672,7 @@
 	name = "\improper Medbay Chemistry Shutters";
 	id = "nerva_medbay_chem"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/medical/chemistry)
 "dHU" = (
 /obj/effect/decal/warning_stripes,
@@ -14271,14 +14195,6 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/bridgedeck/safe_room)
-"dQC" = (
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
-/turf/open/floor/plating,
-/area/torch/fourthdeck/maintenance/starboard)
 "dQD" = (
 /obj/structure/girder/displaced,
 /obj/structure/cable/green{
@@ -14675,7 +14591,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/petrov/rnd)
 "dVu" = (
 /turf/open/floor/shiva/blue,
@@ -15485,10 +15401,6 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hangar)
 "egN" = (
@@ -16120,10 +16032,6 @@
 	dir = 8
 	},
 /obj/structure/barricade/handrail,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "eqb" = (
@@ -17465,13 +17373,6 @@
 /obj/structure/girder/displaced,
 /turf/open/void/show_pipes,
 /area/torch/seconddeck/engineering/foyer)
-"eKC" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/plating/warnplate/west,
-/area/torch/fifthdeck/hangar)
 "eKE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -17594,7 +17495,7 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/xenoflora)
 "eMy" = (
 /turf/closed/wall,
@@ -17997,7 +17898,7 @@
 	name = "Robotics";
 	dir = 2
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/robotics_office)
 "eRe" = (
 /obj/structure/cable/green{
@@ -19374,10 +19275,6 @@
 /turf/open/floor/shiva/wredcorners/north,
 /area/torch/fourthdeck/hallway/fore)
 "fgo" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/catwalk/prison,
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
@@ -19551,10 +19448,6 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/item/coin/gold,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "fir" = (
@@ -20105,10 +19998,6 @@
 /obj/structure/pipes/binary/pump/on{
 	dir = 4;
 	target_pressure = 200
-	},
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
@@ -21549,14 +21438,6 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/shiva/north,
 /area/torch/thirddeck/gym)
-"fGf" = (
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
-/turf/open/floor/vault2/west,
-/area/torch/thirddeck/maintenance/aftport)
 "fGi" = (
 /obj/item/stool,
 /obj/structure/machinery/alarm{
@@ -22380,10 +22261,6 @@
 /obj/structure/closet/crate,
 /obj/effect/spawner/random/tech_supply,
 /obj/effect/spawner/random/bomb_supply,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "fRf" = (
@@ -22827,7 +22704,7 @@
 /area/torch/bridgedeck/cl)
 "fWU" = (
 /obj/structure/catwalk,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/aftport)
 "fXa" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -24499,10 +24376,6 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "gtj" = (
@@ -25571,10 +25444,6 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/storage)
 "gGI" = (
@@ -25797,10 +25666,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 9
 	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "gKl" = (
@@ -25970,25 +25835,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/disperser)
-"gMn" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 9
-	},
-/obj/structure/catwalk,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
-/turf/open/floor/plating,
-/area/torch/firstdeck/maintenance/foreport)
 "gMo" = (
 /obj/structure/mineral_door/iron,
 /turf/open/floor/freezerfloor,
@@ -26062,10 +25908,6 @@
 	dir = 4
 	},
 /obj/structure/machinery/space_heater,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "gNi" = (
@@ -27174,16 +27016,6 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
-"hbl" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/obj/structure/pipes/vents/pump/on{
-	dir = 8
-	},
-/turf/open/floor/shiva/floor3,
-/area/torch/fifthdeck/hangar)
 "hbt" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/vault2/west,
@@ -27311,7 +27143,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/locker)
 "hdL" = (
 /obj/structure/cable/green{
@@ -27669,23 +27501,6 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/dark_sterile,
 /area/space)
-"hjC" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
-/turf/open/floor/plating,
-/area/torch/fourthdeck/maintenance/aft)
 "hjK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -28130,11 +27945,6 @@
 	dir = 4
 	},
 /obj/effect/decal/warning_stripes,
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftport)
 "hpU" = (
@@ -28790,10 +28600,6 @@
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = -21
-	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
@@ -30254,7 +30060,7 @@
 	name = "Lounge";
 	dir = 2
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/thirddeck/cryo)
 "hTG" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -31769,7 +31575,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/petrov/equipment)
 "ioi" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -32036,10 +31842,6 @@
 	dir = 5
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "isa" = (
@@ -32643,11 +32445,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/port)
 "iBi" = (
@@ -33113,7 +32910,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/petrov/isolation)
 "iHg" = (
 /obj/structure/closet/crate,
@@ -33284,10 +33081,6 @@
 	dir = 4
 	},
 /obj/structure/barricade/handrail,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "iJJ" = (
@@ -33544,14 +33337,6 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/security/wing)
-"iMQ" = (
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
-/turf/open/floor/vault2/west,
-/area/torch/thirddeck/maintenance/aftstarboard)
 "iMR" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -34514,7 +34299,7 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/laboratory)
 "iZj" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -35489,7 +35274,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/aftport)
 "jmI" = (
 /obj/structure/extinguisher_cabinet{
@@ -36332,11 +36117,6 @@
 /area/torch/seconddeck/engineering/atmos)
 "jzi" = (
 /obj/structure/barricade/handrail,
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "jzo" = (
@@ -36395,10 +36175,6 @@
 /turf/open/floor/almayer_hull,
 /area/torch/seconddeck/prototype/engine)
 "jzH" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/plating/icefloor/warnplate/northwest,
 /area/torch/fifthdeck/hangar)
 "jzP" = (
@@ -37302,7 +37078,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/medical/exam_room)
 "jMO" = (
 /obj/structure/machinery/light{
@@ -37751,10 +37527,6 @@
 	dir = 8
 	},
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "jSm" = (
@@ -38627,15 +38399,6 @@
 	},
 /turf/open/floor/bluegrid,
 /area/torch/fifthdeck/maintenance/fore)
-"kcQ" = (
-/obj/structure/catwalk,
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
-/turf/open/floor/plating,
-/area/torch/thirddeck/maintenance/port)
 "kcS" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/open/floor/vault2/west,
@@ -39994,10 +39757,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "kuf" = (
@@ -40071,14 +39830,6 @@
 /obj/structure/pipes/standard/manifold/fourway/hidden/yellow,
 /turf/closed/wall/sulaco,
 /area/space)
-"kuB" = (
-/obj/structure/catwalk/prison,
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/plating,
-/area/torch/fifthdeck/hangar)
 "kuQ" = (
 /obj/structure/closet/hydrant{
 	pixel_y = 32
@@ -41216,14 +40967,6 @@
 "kKg" = (
 /turf/closed/wall,
 /area/torch/thirddeck/mess/galley)
-"kKj" = (
-/obj/effect/projector{
-	vector_x = 125;
-	name = "deck2";
-	vector_y = 84
-	},
-/turf/closed/wall/almayer/reinforced,
-/area/torch/seconddeck/maintenance/aftport)
 "kKp" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
@@ -41401,14 +41144,6 @@
 /obj/structure/lattice,
 /turf/open/space,
 /area/torch/firstdeck/thruster/d1port)
-"kMM" = (
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
-/turf/closed/wall/almayer/reinforced,
-/area/torch/fourthdeck/tcommsat/chamber)
 "kMQ" = (
 /turf/closed/wall,
 /area/torch/thirddeck/alphadeck)
@@ -41471,11 +41206,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/port)
 "kNU" = (
@@ -41778,10 +41508,6 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
 	},
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
@@ -43464,13 +43190,6 @@
 /obj/structure/reagent_dispensers/fueltank/gas/hydrogen,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/seconddeck/engineering/engine_room)
-"lpY" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/vault2/west,
-/area/torch/fifthdeck/maintenance/aftstarboard)
 "lqe" = (
 /obj/structure/machinery/power/apc{
 	dir = 1;
@@ -44031,7 +43750,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/medical/equipstorage)
 "lvY" = (
 /obj/structure/pipes/standard/simple/hidden,
@@ -44424,7 +44143,7 @@
 	name = "Fabricator Laboratory";
 	dir = 2
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/development)
 "lAL" = (
 /obj/item/device/robotanalyzer,
@@ -44877,7 +44596,7 @@
 /obj/structure/machinery/door/airlock/almayer/research/reinforced/colony{
 	name = "Miscellaneous Laboratory"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/misc_lab)
 "lHl" = (
 /obj/structure/cable/green{
@@ -45473,11 +45192,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "lOr" = (
@@ -46013,10 +45727,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/barricade/handrail,
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "lWG" = (
@@ -48300,18 +48010,6 @@
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/bluegrid,
 /area/torch/seconddeck/maintenance/foreport)
-"mEB" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/open/floor/shiva/floor3,
-/area/torch/fifthdeck/hangar)
 "mEE" = (
 /obj/structure/machinery/firealarm{
 	dir = 8;
@@ -48515,11 +48213,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/projector{
-	vector_x = 125;
-	name = "deck2";
-	vector_y = 84
-	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/forestarboard)
 "mIa" = (
@@ -48546,10 +48239,6 @@
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/foreport)
 "mIp" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/plating/warnplate/northeast,
 /area/torch/fifthdeck/hangar)
 "mIv" = (
@@ -49151,10 +48840,6 @@
 "mQn" = (
 /obj/structure/pipes/standard/simple/hidden/universal{
 	dir = 4
-	},
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
@@ -50627,10 +50312,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/catwalk,
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "njD" = (
@@ -53089,10 +52770,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "nPC" = (
@@ -53378,11 +53055,6 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "nTZ" = (
@@ -53659,14 +53331,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/seconddeck/engineering/atmos)
-"nXr" = (
-/obj/structure/ore_box,
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/shiva/floor3,
-/area/torch/fifthdeck/expedition_storage)
 "nXt" = (
 /obj/structure/girder/displaced,
 /turf/open/floor/plating,
@@ -54376,7 +54040,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/entry)
 "ohG" = (
 /obj/structure/bed/chair/vehicle/toc{
@@ -55218,10 +54882,6 @@
 "otA" = (
 /obj/structure/closet/crate/freezer/rations,
 /obj/structure/machinery/light/spot,
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "otG" = (
@@ -55524,7 +55184,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralport)
 "oya" = (
 /obj/structure/pipes/standard/simple/visible/scrubbers{
@@ -55966,7 +55626,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/thirddeck/cryo)
 "oEa" = (
 /obj/structure/pipes/standard/manifold/visible/cyan{
@@ -56347,14 +56007,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralstarboard)
-"oKb" = (
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
-/turf/open/nostromowater,
-/area/torch/fourthdeck/maintenance/waterstore)
 "oKh" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -58119,7 +57771,7 @@
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced{
 	name = "Auxiliary Cryogenic Storage Maintenance"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/cryo)
 "pkn" = (
 /obj/structure/machinery/power/apc{
@@ -58412,11 +58064,6 @@
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
-	},
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
@@ -59399,10 +59046,6 @@
 	dir = 5
 	},
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "pwm" = (
@@ -59873,10 +59516,6 @@
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/starboard)
 "pEy" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/cyan{
@@ -60189,10 +59828,6 @@
 /turf/open/floor/shiva,
 /area/torch/fourthdeck/quartermaster/deckchief)
 "pIN" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -60358,7 +59993,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/petrov/phoron)
 "pKy" = (
 /obj/structure/disposalpipe/sortjunction/flipped{
@@ -64439,7 +64074,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/locker)
 "qMD" = (
 /obj/structure/cable/green{
@@ -64811,14 +64446,6 @@
 	},
 /turf/open/floor/shiva/yellow,
 /area/torch/bridgedeck/hallway/fore)
-"qQK" = (
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
-/turf/open/space,
-/area/space)
 "qQQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -65001,15 +64628,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
-"qTF" = (
-/obj/structure/surface/rack,
-/obj/effect/projector{
-	vector_x = 125;
-	name = "deck2";
-	vector_y = 84
-	},
-/turf/open/floor/vault2/west,
-/area/torch/seconddeck/maintenance/aftport)
 "qTO" = (
 /turf/open/floor/shiva/purple/east,
 /area/torch/fifthdeck/exploration)
@@ -65676,11 +65294,6 @@
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 5
-	},
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
@@ -68170,10 +67783,6 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "rIn" = (
@@ -68480,11 +68089,6 @@
 	vector_x = 116;
 	name = "deck4"
 	},
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/torch/fourthdeck/maintenance/starboard)
@@ -68542,14 +68146,6 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/bridgedeck/cl)
-"rOq" = (
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
-/turf/open/floor/vault2/west,
-/area/torch/fourthdeck/maintenance/port)
 "rOr" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/manifold/visible,
@@ -69616,10 +69212,6 @@
 	},
 /turf/open/floor/shiva/blue/west,
 /area/torch/bridgedeck/hallway/fore)
-"sbK" = (
-/obj/structure/catwalk,
-/turf/open/space/basic,
-/area/torch/seconddeck/maintenance/aftstarboard)
 "sbV" = (
 /obj/structure/pipes/portables_connector{
 	dir = 8
@@ -72958,7 +72550,7 @@
 	name = "Research Paperwork Office"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/office)
 "sRP" = (
 /obj/structure/machinery/door/firedoor/border_only,
@@ -73127,11 +72719,6 @@
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/opscheck)
 "sTU" = (
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
 /obj/structure/sign/warning/fall,
 /turf/closed/wall/almayer/reinforced,
 /area/torch/fourthdeck/tcommsat/chamber)
@@ -74466,7 +74053,7 @@
 /obj/structure/bed/stool,
 /obj/structure/machinery/light/small,
 /obj/structure/curtain/red,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/medical/exam_room)
 "tjY" = (
 /obj/structure/window/reinforced{
@@ -75573,11 +75160,6 @@
 "tBC" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/effect/projector{
-	name = "deck3";
-	vector_x = -125;
-	vector_y = 3
-	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "tBF" = (
@@ -78395,13 +77977,6 @@
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/shiva/floor3,
 /area/torch/firstdeck/teleporter)
-"uoL" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/plating,
-/area/torch/fifthdeck/hangar)
 "uoM" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	icon_state = "pdoor0";
@@ -78937,7 +78512,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research{
 	name = "\improper Research Division"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/entry)
 "uuK" = (
 /obj/structure/cable/green{
@@ -79782,13 +79357,6 @@
 	},
 /turf/open/floor/bluegrid,
 /area/torch/seconddeck/maintenance/central)
-"uEp" = (
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
-/turf/closed/wall/almayer/reinforced,
-/area/torch/firstdeck/safe_room)
 "uEt" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -80787,10 +80355,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "uSP" = (
@@ -81636,11 +81200,6 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/effect/projector{
-	vector_x = 125;
-	name = "deck2";
-	vector_y = 84
-	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/forestarboard)
 "vfb" = (
@@ -82101,7 +81660,7 @@
 /area/torch/seconddeck/engineering/engineering_bay)
 "vkB" = (
 /obj/structure/catwalk,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/fourthdeck/catwalks)
 "vkI" = (
 /obj/structure/sign/warning/pods/south{
@@ -82947,10 +82506,6 @@
 /turf/open/floor/plating,
 /area/torch/thirddeck/hallway/center)
 "vxo" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/cyan{
@@ -83493,7 +83048,7 @@
 	locked = 1;
 	name = "Escape Pod Six Hatch"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/space)
 "vDS" = (
 /obj/structure/closet/secure_closet/brig,
@@ -84133,10 +83688,6 @@
 /area/torch/fourthdeck/pathfinder)
 "vMn" = (
 /obj/structure/machinery/floodlight,
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "vMO" = (
@@ -84764,10 +84315,6 @@
 /obj/structure/pipes/vents/pump/on{
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/hangar)
 "vXm" = (
@@ -85079,14 +84626,6 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/thirddeck/hallway/center)
-"wbv" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/obj/structure/catwalk/prison,
-/turf/open/floor/plating,
-/area/torch/fifthdeck/hangar)
 "wbI" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -85425,13 +84964,6 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/thirddeck/hallway/center)
-"wfh" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/shiva/floor3,
-/area/torch/fifthdeck/expedition_storage)
 "wfk" = (
 /obj/structure/pipes/standard/manifold/hidden/yellow,
 /obj/structure/cable/green{
@@ -88423,13 +87955,6 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition/eva)
-"wSn" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
-/turf/open/floor/shiva/floor3,
-/area/torch/fifthdeck/hangar)
 "wSt" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -88634,10 +88159,6 @@
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/thruster/d1port)
 "wUw" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/hangar)
@@ -89451,10 +88972,6 @@
 	dir = 9
 	},
 /obj/structure/largecrate,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "xdN" = (
@@ -91662,7 +91179,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/medical/surgery)
 "xHX" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -92008,10 +91525,6 @@
 /turf/open/floor/darkpurple2/west,
 /area/torch/thirddeck/chapel/memorial)
 "xLL" = (
-/obj/effect/projector{
-	vector_x = -116;
-	name = "deck5"
-	},
 /turf/open/floor/plating/icefloor/warnplate/north,
 /area/torch/fifthdeck/hangar)
 "xLS" = (
@@ -92940,7 +92453,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/research/hallway)
 "xYo" = (
 /obj/structure/machinery/power/apc{
@@ -93581,25 +93094,6 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/hallway/fore)
-"yil" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/effect/projector{
-	name = "bridgedeck";
-	vector_x = -125
-	},
-/turf/open/floor/plating,
-/area/torch/firstdeck/maintenance/foreport)
 "yim" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -93789,7 +93283,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/torch/firstdeck/medical/foyer/storeroom)
 "ylk" = (
 /turf/open/floor/vault2/west,
@@ -111007,7 +110501,7 @@ dxf
 mON
 oDc
 iBf
-rOq
+llk
 drx
 kNL
 bsU
@@ -112262,10 +111756,10 @@ qYh
 fLM
 fLD
 omM
-oKb
-oKb
-oKb
-oKb
+spB
+spB
+spB
+spB
 omM
 hxx
 fNl
@@ -112519,9 +112013,9 @@ nQj
 tGF
 omM
 spB
-oKb
-oKb
-oKb
+spB
+spB
+spB
 omM
 hxx
 fNl
@@ -113021,7 +112515,7 @@ akd
 akd
 akd
 akd
-kMM
+akd
 akd
 sTU
 xSR
@@ -116347,7 +115841,7 @@ hnq
 jNY
 rYi
 rYi
-dQC
+iEf
 bGV
 rYi
 rYi
@@ -116859,7 +116353,7 @@ hnq
 jNY
 gON
 vBe
-dQC
+iEf
 bGV
 vBe
 jaL
@@ -119085,9 +118579,9 @@ lAG
 pCv
 pCv
 iNR
-sbK
-sbK
-sbK
+til
+til
+til
 qoh
 qoh
 fNy
@@ -119376,7 +118870,7 @@ jQd
 iDv
 unD
 bxk
-kKj
+mmG
 mmG
 mmG
 hIu
@@ -119631,8 +119125,8 @@ gjs
 jQd
 eCw
 oAB
-qTF
-kKj
+jvs
+mmG
 mmG
 mmG
 hIu
@@ -120476,7 +119970,7 @@ pPg
 pPg
 pPg
 pPg
-hjC
+pPg
 hyc
 qXQ
 qXQ
@@ -131288,7 +130782,7 @@ cVe
 cVe
 ksx
 dkQ
-uEp
+ksx
 dkQ
 ksx
 qdp
@@ -131544,7 +131038,7 @@ cVe
 cVe
 ksx
 ksx
-uEp
+ksx
 ksx
 ksx
 oCh
@@ -131800,7 +131294,7 @@ cVe
 cVe
 stS
 hTR
-bqi
+qYE
 bIT
 ksx
 oLA
@@ -132056,7 +131550,7 @@ cVe
 cVe
 jwO
 hlC
-bqi
+qYE
 qYE
 ksx
 pPy
@@ -132312,7 +131806,7 @@ cVe
 cVe
 kpw
 dKE
-bqi
+qYE
 kmG
 ksx
 vEq
@@ -134138,7 +133632,7 @@ sMI
 eYs
 pPS
 ptv
-buR
+ptv
 hUj
 irH
 asj
@@ -135557,7 +135051,7 @@ nzU
 eUu
 eUu
 bwa
-wfh
+mpd
 mpd
 cOF
 hxK
@@ -135813,7 +135307,7 @@ nzU
 mpd
 mpd
 bwa
-nXr
+krE
 krE
 cOF
 hxK
@@ -136069,7 +135563,7 @@ nzU
 uyN
 vEN
 bwa
-wfh
+mpd
 tiQ
 cOF
 hxK
@@ -136851,10 +136345,10 @@ tfg
 tfg
 lIL
 egz
-uoL
-uoL
-uoL
-uoL
+lIL
+lIL
+lIL
+lIL
 gEN
 tfg
 tfg
@@ -137106,11 +136600,11 @@ mIP
 mIP
 mIP
 mIP
-wSn
-wSn
-wSn
-wSn
-wSn
+mIP
+mIP
+mIP
+mIP
+mIP
 mIP
 mIP
 mIP
@@ -137362,8 +136856,8 @@ lIL
 lIL
 lIL
 lIL
-uoL
-uoL
+lIL
+lIL
 lIL
 lIL
 lIL
@@ -138231,10 +137725,10 @@ urD
 foP
 ktW
 eub
-gMn
-buR
+lhu
 ptv
-yil
+ptv
+iUC
 dDX
 asj
 asj
@@ -140687,11 +140181,11 @@ lIL
 lIL
 lIL
 lIL
-uoL
-uoL
-uoL
-uoL
-uoL
+lIL
+lIL
+lIL
+lIL
+lIL
 lIL
 lIL
 lIL
@@ -140938,19 +140432,19 @@ umD
 umD
 umD
 mIP
-wSn
-wSn
-wSn
+mIP
+mIP
+mIP
 vXl
 vXl
-wSn
-wSn
-mEB
-wSn
-wSn
-wSn
-wSn
-wSn
+mIP
+mIP
+dwa
+mIP
+mIP
+mIP
+mIP
+mIP
 mIP
 mIP
 mIP
@@ -141450,19 +140944,19 @@ mIP
 mIP
 dwa
 mIP
-hbl
-hbl
-wSn
-wSn
-wSn
+vXl
+vXl
+mIP
+mIP
+mIP
 wUw
 tfg
-hbl
-wSn
-wSn
-wSn
-wSn
-wSn
+vXl
+mIP
+mIP
+mIP
+mIP
+mIP
 mIP
 mIP
 mIP
@@ -141711,14 +141205,14 @@ fCo
 fCo
 fCo
 nMR
-wSn
-wbv
-wSn
+mIP
+tfg
+mIP
 jzH
-eKC
-eKC
-eKC
-eKC
+iXS
+iXS
+iXS
+iXS
 iXS
 iXS
 iXS
@@ -141967,13 +141461,13 @@ nee
 orv
 fCo
 fCo
-wSn
-wbv
-wSn
+mIP
+tfg
+mIP
 xLL
-uoL
-uoL
-uoL
+lIL
+lIL
+lIL
 lIL
 lIL
 lIL
@@ -142207,7 +141701,7 @@ oKk
 cmX
 oMt
 mgu
-lpY
+cTC
 cTC
 tkw
 tFn
@@ -142223,13 +141717,13 @@ uRU
 gpZ
 koe
 bMV
-wSn
-wbv
-wSn
+mIP
+tfg
+mIP
 xLL
-uoL
-uoL
-uoL
+lIL
+lIL
+lIL
 lIL
 lIL
 lIL
@@ -142479,12 +141973,12 @@ ipo
 hGT
 sOf
 bMV
-wSn
-wbv
-wSn
+mIP
+tfg
+mIP
 xLL
-uoL
-uoL
+lIL
+lIL
 lIL
 lIL
 lIL
@@ -142735,12 +142229,12 @@ chQ
 csw
 fCo
 fCo
-wSn
-wbv
-wSn
+mIP
+tfg
+mIP
 xLL
-uoL
-uoL
+lIL
+lIL
 lIL
 lIL
 lIL
@@ -142991,12 +142485,12 @@ fCo
 fCo
 lTn
 lIL
-wSn
-wbv
-wSn
+mIP
+tfg
+mIP
 mIp
-bMU
-bMU
+kUj
+kUj
 kUj
 kUj
 kUj
@@ -143244,15 +142738,15 @@ mIP
 mIP
 mIP
 mIP
-wSn
-wSn
-wSn
-wSn
-kuB
-wSn
-wSn
-wSn
-wSn
+mIP
+mIP
+mIP
+mIP
+tfg
+mIP
+mIP
+mIP
+mIP
 mIP
 mIP
 mIP
@@ -143445,7 +142939,7 @@ wLY
 ftV
 ftV
 ftV
-qQK
+jNY
 jNY
 jNY
 jNY
@@ -143500,15 +142994,15 @@ tfg
 tfg
 tfg
 tfg
-wbv
-wbv
-wbv
-wbv
+tfg
+tfg
+tfg
+tfg
 fgo
-wbv
-wbv
-wbv
-wbv
+tfg
+tfg
+tfg
+tfg
 tfg
 tfg
 tJs
@@ -143692,7 +143186,7 @@ rLr
 wbm
 gPx
 nCS
-kcQ
+qRh
 beV
 bhb
 smj
@@ -145308,7 +144802,7 @@ tbm
 kHf
 vfJ
 exq
-aTN
+hOG
 vMn
 vMn
 kHf
@@ -151376,7 +150870,7 @@ xcx
 gaD
 xcx
 hpR
-fGf
+ylk
 guD
 hVU
 aUW
@@ -151599,7 +151093,7 @@ lAy
 eKf
 lGg
 dku
-iMQ
+dku
 hGy
 wFH
 dku
