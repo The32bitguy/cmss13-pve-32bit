@@ -146,6 +146,10 @@
 	name = "\improper Command - XO's Office"
 	minimap_color = MINIMAP_AREA_COMMAND
 
+/area/torch/bridgedeck/charon
+	name = "\improper Charon"
+	icon_state = "shuttlered"
+
 /area/torch/bridgedeck/bridgecheck
 	name = "\improper Bridge Deck Security Checkpoint"
 	icon_state = "checkpoint"
